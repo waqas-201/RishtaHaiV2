@@ -1,12 +1,24 @@
 'use client';
+import { useState } from 'react';
+import { Dialog, DialogContent, DialogTrigger } from '@/components/ui/dialog';
 
 import { motion } from 'framer-motion';
-import { Heart, Users, Shield, Star } from 'lucide-react';
+import { Heart, Users, Shield, Star, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
+import MultiStepForm from './form/stepControler';
 
 export default function HeroSection() {
+  const [open, setOpen] = useState(false);
+
+  const handleClick = (e: React.MouseEvent<HTMLButtonElement>) => {
+    e.preventDefault();
+    setOpen(true);
+  };
+  const handleClose = () => {
+    setOpen(false);
+  };
+
   return (
     <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background */}
@@ -120,7 +132,7 @@ export default function HeroSection() {
           
           <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mb-6">
             <Select>
-              <SelectTrigger className="h-12">
+              <SelectTrigger className="h-12 bg-gray-100 dark:bg-gray-800 text-gray-800 dark:text-gray-200">
                 <SelectValue placeholder="I'm looking for" />
               </SelectTrigger>
               <SelectContent>
@@ -176,10 +188,40 @@ export default function HeroSection() {
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
           >
-            <Button className="w-full h-14 text-lg font-semibold bg-gradient-to-r from-pink-600 to-blue-600 hover:from-pink-700 hover:to-blue-700 rounded-xl">
-              <Heart className="mr-2" size={20} />
-              Find My Perfect Match
-            </Button>
+
+
+
+            <Dialog open={open} onOpenChange={setOpen}>
+
+
+              {/* Get Started Button */}
+              <DialogTrigger asChild>
+                <div className="flex flex-col items-start gap-[2px] md:w-auto w-full">
+                  <p className="invisible text-sm mb-1">Get Started</p>
+                  <Button className="w-full h-14 text-lg font-semibold bg-gradient-to-r from-pink-600 to-blue-600 hover:from-pink-700 hover:to-blue-700 rounded-xl" onClick={handleClick} >
+                    <Heart className="mr-2" size={20} />
+                    Find My Perfect Match
+                  </Button>
+
+                </div>
+              </DialogTrigger>
+
+              <DialogContent className="md:w-[100%] rounded-lg w-[95%] min-h-fit bg-white/95 dark:bg-gray-900/95 max-h-[99vh] md:p-6 p-2 flex flex-col md:overflow-visible md:landscape:overflow-visible landscape:overflow-y-scroll">
+                {/* Custom Close Button for Mobile */}
+                <button
+                  onClick={handleClose}
+                  className="md:hidden absolute right-2 top-2 w-12 h-12 flex items-center justify-center bg-gray-100 dark:bg-gray-800 rounded-full touch-manipulation active:bg-gray-200 dark:active:bg-gray-700 z-50"
+                  aria-label="Close dialog"
+                >
+                  <X className="w-4 h-4 text-gray-800 dark:text-white" />
+                </button>
+
+                <div className="md:p-6 p-2">
+                  <MultiStepForm />
+                </div>
+              </DialogContent>
+            </Dialog>
+
           </motion.div>
         </motion.div>
 
@@ -204,6 +246,7 @@ export default function HeroSection() {
           </div>
         </motion.div>
       </div>
+
     </section>
   );
 }

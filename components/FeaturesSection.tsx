@@ -117,13 +117,13 @@ export default function FeaturesSection() {
           className="mt-20 text-center"
         >
           <div className="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-lg max-w-4xl mx-auto">
-            <div className="text-4xl text-pink-600 mb-4 font-amiri">"</div>
+            <div className="text-4xl text-pink-600 mb-4 font-amiri">&quot;</div>
             <p className="text-2xl font-amiri text-gray-700 dark:text-gray-300 mb-4 leading-relaxed">
               وَمِنْ آيَاتِهِ أَنْ خَلَقَ لَكُم مِّنْ أَنفُسِكُمْ أَزْوَاجًا لِّتَسْكُنُوا إِلَيْهَا وَجَعَلَ بَيْنَكُم مَّوَدَّةً وَرَحْمَةً
             </p>
             <p className="text-lg text-gray-600 dark:text-gray-400 italic">
-              "And among His signs is that He created for you from yourselves mates 
-              that you may find tranquility in them; and He placed between you affection and mercy."
+              &quot;And among His signs is that He created for you from yourselves mates
+              that you may find tranquility in them; and He placed between you affection and mercy.&quot;
             </p>
             <p className="text-sm text-gray-500 dark:text-gray-500 mt-2">- Quran 30:21</p>
           </div>

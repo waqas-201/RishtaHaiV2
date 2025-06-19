@@ -2,6 +2,7 @@ import './globals.css';
 import type { Metadata } from 'next';
 import { Inter, Poppins } from 'next/font/google';
 import { ThemeProvider } from '@/components/ThemeProvider';
+import Providers from '@/providers/providers';
 
 const inter = Inter({ subsets: ['latin'] });
 const poppins = Poppins({ 
@@ -12,7 +13,7 @@ const poppins = Poppins({
 
 export const metadata: Metadata = {
   title: 'RishtaHai - Find Your Perfect Islamic Match in Pakistan',
-  description: 'Pakistan\'s most trusted Islamic matrimonial platform. Find your life partner with Islamic values and traditions across Pakistan.',
+  description: 'Pakistan\'s most trusted Islamic matrimonial platform. Find your life partner with Islamic values and traditions across Pakistan.'
 };
 
 export default function RootLayout({
@@ -26,7 +27,10 @@ export default function RootLayout({
         <ThemeProvider
           defaultTheme="system"
         >
+          <Providers>
+
           {children}
+          </Providers>
         </ThemeProvider>
       </body>
     </html>
