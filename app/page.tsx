@@ -1,11 +1,13 @@
 'use client';
 
-import Header from '@/components/Header';
-import HeroSection from '@/components/HeroSection';
-import FeaturesSection from '@/components/FeaturesSection';
-import HowItWorks from '@/components/HowItWorks';
-import SuccessStories from '@/components/SuccessStories';
-import Footer from '@/components/Footer';
+import dynamic from 'next/dynamic';
+
+const Header = dynamic(() => import('@/components/Header'));
+const HeroSection = dynamic(() => import('@/components/HeroSection'));
+const FeaturesSection = dynamic(() => import('@/components/FeaturesSection'));
+const HowItWorks = dynamic(() => import('@/components/HowItWorks'));
+const SuccessStories = dynamic(() => import('@/components/SuccessStories'));
+const Footer = dynamic(() => import('@/components/Footer'));
 
 export default function Home() {
   return (

@@ -20,7 +20,7 @@ export default function HeroSection() {
   };
 
   return (
-    <section id="home" className="  lg:mt-10 mt-36  relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section id="home" className="  xl:mt-10 mt-36  relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background */}
       <div className="absolute inset-0 hero-gradient islamic-pattern"></div>
       
