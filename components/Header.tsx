@@ -33,12 +33,12 @@ export default function Header() {
             whileHover={{ scale: 1.05 }}
             className="flex items-center space-x-2"
           >
-            <Image
-              src="/image.png"
+            <img
+              src="/logo.svg"
               alt="RishtaHai Logo"
               width={120}
               height={40}
-              className="h-10 w-auto dark:brightness-0 dark:invert"
+              className="h-20 w-auto "
             />
           </motion.div>
 
