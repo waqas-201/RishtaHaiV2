@@ -1,9 +1,9 @@
+/* eslint-disable @next/next/no-img-element */
 'use client';
 
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { Menu, X, Heart, User, Search, MessageCircle, Shield } from 'lucide-react';
-import Image from 'next/image';
+import { Menu, X } from 'lucide-react';
 import { ThemeToggle } from './ThemeToggle';
 
 export default function Header() {

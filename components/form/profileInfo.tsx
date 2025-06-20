@@ -1,4 +1,4 @@
-import { ArrowRight, UserIcon } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { Button } from "../ui/button";
 
 import { useFormContext } from "react-hook-form";
@@ -7,6 +7,7 @@ import { AnimatePresence } from "framer-motion";
 import { FormData, StepComponentProps } from "./types";
 import { RadioGroupWrapper } from "./animatedRadioWrappre";
 import { genderOptions, hasChildrenOptions, LiveWithYou, maritalStatusOptions, profileOptions } from "@/app/constents/constents";
+import UserIcon from "./userIcon";
 
 
 export const ProfileInfo: React.FC<StepComponentProps> = ({ nextStep }) => {
