@@ -42,42 +42,47 @@ export default function Header() {
             />
           </motion.div>
 
+
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
             <motion.a
-              whileHover={{ scale: 1.05 }}
+              whileHover={{ scale: 1.05, y: -2 }}
               href="#home"
-              className="text-gray-700 dark:text-gray-300 hover:text-pink-600 dark:hover:text-pink-400 font-medium transition-colors"
+              className="text-gray-700 dark:text-gray-300 hover:text-pink-600 dark:hover:text-pink-400 font-medium transition-all duration-300 relative group"
             >
               Home
+              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-pink-600 to-blue-600 group-hover:w-full transition-all duration-300"></span>
             </motion.a>
             <motion.a
-              whileHover={{ scale: 1.05 }}
-              href="#search"
-              className="text-gray-700 dark:text-gray-300 hover:text-pink-600 dark:hover:text-pink-400 font-medium transition-colors"
+              whileHover={{ scale: 1.05, y: -2 }}
+              href="#HWC"
+              className="text-gray-700 dark:text-gray-300 hover:text-pink-600 dark:hover:text-pink-400 font-medium transition-all duration-300 relative group"
             >
-              Search
+              How It Works
+              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-pink-600 to-blue-600 group-hover:w-full transition-all duration-300"></span>
             </motion.a>
             <motion.a
-              whileHover={{ scale: 1.05 }}
+              whileHover={{ scale: 1.05, y: -2 }}
               href="#success"
-              className="text-gray-700 dark:text-gray-300 hover:text-pink-600 dark:hover:text-pink-400 font-medium transition-colors"
+              className="text-gray-700 dark:text-gray-300 hover:text-pink-600 dark:hover:text-pink-400 font-medium transition-all duration-300 relative group"
             >
               Success Stories
+              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-pink-600 to-blue-600 group-hover:w-full transition-all duration-300"></span>
             </motion.a>
             <motion.a
-              whileHover={{ scale: 1.05 }}
+              whileHover={{ scale: 1.05, y: -2 }}
               href="#features"
-              className="text-gray-700 dark:text-gray-300 hover:text-pink-600 dark:hover:text-pink-400 font-medium transition-colors"
+              className="text-gray-700 dark:text-gray-300 hover:text-pink-600 dark:hover:text-pink-400 font-medium transition-all duration-300 relative group"
             >
               Features
+              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-pink-600 to-blue-600 group-hover:w-full transition-all duration-300"></span>
             </motion.a>
           </nav>
 
           {/* Desktop CTA Buttons */}
           <div className="hidden md:flex items-center space-x-4">
             <ThemeToggle />
-            <motion.button
+            {/* <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className="text-gray-700 dark:text-gray-300 hover:text-pink-600 dark:hover:text-pink-400 font-medium transition-colors"
@@ -90,7 +95,7 @@ export default function Header() {
               className="bg-gradient-to-r from-pink-600 to-blue-600 text-white px-6 py-2 rounded-full font-medium hover:shadow-lg transition-all"
             >
               Join Free
-            </motion.button>
+            </motion.button> */}
           </div>
 
           {/* Mobile Menu Button */}
@@ -118,7 +123,7 @@ export default function Header() {
                 Home
               </a>
               <a href="#search" className="text-gray-700 dark:text-gray-300 hover:text-pink-600 dark:hover:text-pink-400 font-medium">
-                Search
+                How It Works
               </a>
               <a href="#success" className="text-gray-700 dark:text-gray-300 hover:text-pink-600 dark:hover:text-pink-400 font-medium">
                 Success Stories
@@ -127,12 +132,7 @@ export default function Header() {
                 Features
               </a>
               <div className="flex flex-col space-y-2 pt-4 border-t border-gray-200 dark:border-gray-700">
-                <button className="text-gray-700 dark:text-gray-300 hover:text-pink-600 dark:hover:text-pink-400 font-medium text-left">
-                  Login
-                </button>
-                <button className="bg-gradient-to-r from-pink-600 to-blue-600 text-white px-6 py-2 rounded-full font-medium">
-                  Join Free
-                </button>
+
               </div>
             </nav>
           </motion.div>
