@@ -20,7 +20,7 @@ export default function HeroSection() {
   };
 
   return (
-    <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section id="home" className="  lg:mt-10 mt-36  relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background */}
       <div className="absolute inset-0 hero-gradient islamic-pattern"></div>
       
@@ -70,7 +70,7 @@ export default function HeroSection() {
         </motion.div>
       </div>
 
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <div className="  relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
@@ -78,7 +78,7 @@ export default function HeroSection() {
           className="mb-8"
         >
           <motion.h1 
-            className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight text-gray-900 dark:text-white"
+            className="  text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight text-gray-900 dark:text-white"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
@@ -101,7 +101,7 @@ export default function HeroSection() {
 
           {/* Stats */}
           <motion.div 
-            className="flex flex-wrap justify-center gap-8 mb-12"
+            className="flex  flex-wrap justify-center gap-8 lg:mb-12 mb-36 "
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}
@@ -230,7 +230,7 @@ export default function HeroSection() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 1.0 }}
-          className="flex flex-wrap justify-center items-center gap-8 text-gray-600 dark:text-gray-400"
+          className="flex   flex-wrap justify-center items-center gap-8 text-gray-600 dark:text-gray-400"
         >
           <div className="flex items-center gap-2">
             <Shield className="text-green-600" size={20} />

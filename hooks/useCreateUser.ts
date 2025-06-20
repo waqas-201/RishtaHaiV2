@@ -10,14 +10,16 @@ const useCreateUser = () => {
     mutationKey: ["createUser"],
     mutationFn: createUser,
     onSuccess: (data) => {
+      console.log(data);
+
       if (data.error) {
-        toast.error(data.error.message);
+        toast(data.error.message);
       }
     },
     onError: (error) => {
       console.log(error);
 
-      toast.error("failed to submit. try again");
+      toast("failed to submit. try again");
     },
   });
 

@@ -41,15 +41,16 @@ export function DescriptionAboutUser({ previousStep, nextStep }: StepComponentPr
 
     const submit = async () => {
         const isValid = await trigger(['description']);
-        // console.log("Is Valid:", isValid);
-        // console.log("Form Errors:", errors);
+        console.log("Is Valid:", isValid);
 
         if (isValid) {
             const data = getValues();
+            console.log(data);
+
             // console.log("All Form Data:", data);
-            mutate(data);
+            mutate(data, { onSuccess: (response) => { console.log("Response:", response); }, onError: (error) => { console.error("Error:", error); } });  
         } else {
-            // console.log("Validation failed, description:", getValues('description'));
+            console.log("Validation failed. Please check the form.");
         }
     };
 
