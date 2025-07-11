@@ -3,6 +3,7 @@ import type { Metadata } from 'next';
 import { Inter, Poppins } from 'next/font/google';
 import { ThemeProvider } from '@/components/ThemeProvider';
 import Providers from '@/providers/providers';
+import SmoothScroll from '@/providers/lenis-provider';
 
 const inter = Inter({ subsets: ['latin'] });
 const poppins = Poppins({ 
@@ -27,6 +28,7 @@ export default function RootLayout({
         <ThemeProvider
           defaultTheme="system"
         >
+          <SmoothScroll />
           <Providers>
 
           {children}
