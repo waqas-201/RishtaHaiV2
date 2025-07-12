@@ -19,15 +19,14 @@ export default function Footer() {
           >
             <div className="flex items-center mb-4">
               <Image
-                src="/image.png"
+                src="https://r6lo7i3owc.ufs.sh/f/Q3K0qACgFHuv4ZYdz4VkADzSpUhJFoWbeRXxTtVmQncuv40g"
                 alt="RishtaHai Logo"
-                width={120}
-                height={40}
-                className="h-10 w-auto brightness-0 invert"
+                width={150}
+                height={50}
               />
             </div>
             <p className="text-gray-300 mb-6 leading-relaxed">
-              Pakistan's most trusted Islamic matrimonial platform, helping Muslims across 
+              Pakistan&apos;s most trusted Islamic matrimonial platform, helping Muslims across 
               Pakistan find their perfect life partner with Islamic values and traditions.
             </p>
             <div className="flex space-x-4">

@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import { Menu, X } from 'lucide-react';
 import { ThemeToggle } from './ThemeToggle'
 import { useLenis } from "lenis/react"
+import Image from 'next/image';
 
 
 export default function Header() {
@@ -39,8 +40,8 @@ export default function Header() {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <motion.div whileHover={{ scale: 1.05 }} className="flex items-center space-x-2">
-            <img
-              src="/logo.svg"
+            <Image
+              src="https://r6lo7i3owc.ufs.sh/f/Q3K0qACgFHuv4ZYdz4VkADzSpUhJFoWbeRXxTtVmQncuv40g"
               alt="RishtaHai Logo"
               width={120}
               height={40}

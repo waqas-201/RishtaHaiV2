@@ -20,7 +20,7 @@ export default function HeroSection() {
   };
 
   return (
-    <section id="home" className="  xl:mt-10 mt-36  relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section id="home" className="  xl:mt-10 mt-20  relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background */}
       <div className="absolute inset-0 hero-gradient islamic-pattern"></div>
       
@@ -99,27 +99,27 @@ export default function HeroSection() {
             <span className="text-blue-600 font-semibold"> trusted</span> matrimonial services
           </motion.p>
 
-          {/* Stats */}
-          <motion.div 
-            className="flex  flex-wrap justify-center gap-8 lg:mb-12 mb-36 "
-            initial={{ opacity: 0, y: 30 }}
+          <motion.div
+            className="flex justify-center gap-4 sm:gap-6 mb-6 sm:mb-8"
+            initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}
           >
             <div className="text-center">
-              <div className="text-3xl font-bold text-pink-600">50K+</div>
-              <div className="text-gray-600 dark:text-gray-400">Happy Couples</div>
+              <div className="text-xl sm:text-2xl md:text-3xl font-bold text-pink-600">50K+</div>
+              <div className="text-xs sm:text-sm text-gray-600 dark:text-gray-400">Happy Couples</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-bold text-blue-600">All</div>
-              <div className="text-gray-600 dark:text-gray-400">Pakistan Cities</div>
+              <div className="text-xl sm:text-2xl md:text-3xl font-bold text-blue-600">All</div>
+              <div className="text-xs sm:text-sm text-gray-600 dark:text-gray-400">Pakistan Cities</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-bold text-green-600">10+</div>
-              <div className="text-gray-600 dark:text-gray-400">Years Experience</div>
+              <div className="text-xl sm:text-2xl md:text-3xl font-bold text-green-600">10+</div>
+              <div className="text-xs sm:text-sm text-gray-600 dark:text-gray-400">Years Experience</div>
             </div>
           </motion.div>
         </motion.div>
+
 
         {/* Search Form */}
         <motion.div
