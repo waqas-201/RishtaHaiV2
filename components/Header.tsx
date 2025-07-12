@@ -21,7 +21,7 @@ export default function Header() {
 
   const handleSmoothScroll = (e: React.MouseEvent, target: string) => {
     e.preventDefault();
-    const el = document.querySelector(target);
+    const el = document.querySelector(target) as HTMLElement;
     if (el) lenis?.scrollTo(el);
     setIsMenuOpen(false); // close menu on mobile
   };
