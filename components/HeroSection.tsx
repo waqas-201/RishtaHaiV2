@@ -20,7 +20,7 @@ export default function HeroSection() {
   };
 
   return (
-    <section id="home" className="  xl:mt-10 mt-20  border relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section id="home" className="  xl:mt-10 mt-20   relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background */}
       <div className="absolute inset-0 hero-gradient islamic-pattern"></div>
       
@@ -70,7 +70,8 @@ export default function HeroSection() {
         </motion.div>
       </div>
 
-      <div className=" border border-red-500 relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <div className=" 
+      relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
@@ -126,11 +127,11 @@ export default function HeroSection() {
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.8 }}
-          className="bg-white/90 dark:bg-gray-900/90 backdrop-blur-md rounded-2xl md:p-8 p-4 shadow-2xl max-w-4xl mx-auto mb-8"
+          className="bg-white/90 dark:bg-gray-900/90 backdrop-blur-mdrounded-2xl md:p-8 p-4 shadow-2xl max-w-4xl mx-auto mb-8"
         >
           <h3 className="md:text-2xl text-lg font-semibold md:mb-6 mb-4  text-gray-800 dark:text-white">Start Your Journey Today</h3>
           
-          <div className="grid grid-cols-2 md:grid-cols-4 md:gap-4 gap-2 mb-6">
+          <div className="   grid grid-cols-2 md:grid-cols-4 md:gap-4 gap-2 mb-6">
             <Select>
               <SelectTrigger className="md:h-12 bg-gray-100 dark:bg-gray-800 text-gray-800 dark:text-gray-200">
                 <SelectValue placeholder="I'm looking for" />
@@ -189,15 +190,12 @@ export default function HeroSection() {
             whileTap={{ scale: 0.98 }}
           >
 
-
-
             <Dialog open={open} onOpenChange={setOpen}>
 
 
               {/* Get Started Button */}
               <DialogTrigger asChild>
-                <div className="flex flex-col items-start gap-[2px] md:w-auto w-full">
-                  <p className="invisible text-sm mb-1">Get Started</p>
+                <div className="flex flex-col items-start gap-[2px] md:w-auto w-full bor">
                   <Button className="w-full h-14 text-lg font-semibold bg-gradient-to-r from-pink-600 to-blue-600 hover:from-pink-700 hover:to-blue-700 rounded-xl" onClick={handleClick} >
                     <Heart className="mr-2" size={20} />
                     Find My Perfect Match
