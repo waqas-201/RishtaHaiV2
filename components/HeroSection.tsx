@@ -1,5 +1,5 @@
 'use client';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Dialog, DialogContent, DialogTrigger } from '@/components/ui/dialog';
 
 import { motion } from 'framer-motion';
@@ -10,6 +10,16 @@ import MultiStepForm from './form/stepControler';
 
 export default function HeroSection() {
   const [open, setOpen] = useState(false);
+  const [scrollY, setScrollY] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrollY(window.scrollY);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   const handleClick = (e: React.MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
@@ -20,18 +30,27 @@ export default function HeroSection() {
   };
 
   return (
-    <section id="home" className="  xl:mt-10 mt-20   relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section id="home" className="  mt-20   relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background */}
       <div className="absolute inset-0 hero-gradient islamic-pattern"></div>
-      
+      {/* Background Image */}
+      <div
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-10"
+        style={{
+          backgroundImage: "url('https://r6lo7i3owc.ufs.sh/f/Q3K0qACgFHuv1ioTp35PFCDeT3nAmj5x8qlSUWK70kMzbEa2')",
+          transform: `translateY(${scrollY * 0.5}px)`
+        }}
+      ></div>
+
+
       {/* Floating Elements */}
       <div className="absolute inset-0 overflow-hidden">
         <motion.div
-          animate={{ 
+          animate={{
             y: [0, -20, 0],
             rotate: [0, 5, 0]
           }}
-          transition={{ 
+          transition={{
             duration: 6,
             repeat: Infinity,
             ease: "easeInOut"
@@ -41,11 +60,11 @@ export default function HeroSection() {
           <Heart size={60} />
         </motion.div>
         <motion.div
-          animate={{ 
+          animate={{
             y: [0, 20, 0],
             rotate: [0, -5, 0]
           }}
-          transition={{ 
+          transition={{
             duration: 8,
             repeat: Infinity,
             ease: "easeInOut"
@@ -55,11 +74,11 @@ export default function HeroSection() {
           <Star size={40} />
         </motion.div>
         <motion.div
-          animate={{ 
+          animate={{
             y: [0, -15, 0],
             x: [0, 10, 0]
           }}
-          transition={{ 
+          transition={{
             duration: 7,
             repeat: Infinity,
             ease: "easeInOut"
@@ -71,14 +90,14 @@ export default function HeroSection() {
       </div>
 
       <div className=" 
-      relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+  relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           className="mb-8"
         >
-          <motion.h1 
+          <motion.h1
             className=" text-4xl md:text-6xl lg:text-7xl font-bold md:mb-6 mb-2 leading-tight text-gray-900 dark:text-white"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -88,15 +107,15 @@ export default function HeroSection() {
             <br />
             <span className="gradient-text font-amiri">Islamic Match</span>
           </motion.h1>
-          
-          <motion.p 
+
+          <motion.p
             className="text-xl md:text-2xl text-gray-600 dark:text-gray-300 md:mb-6 mb-2 max-w-3xl mx-auto leading-relaxed"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
           >
-            Join thousands of Pakistani Muslims in finding their life partner through 
-            <span className="text-pink-600 font-semibold"> halal</span> and 
+            Join thousands of Pakistani Muslims in finding their life partner through
+            <span className="text-pink-600 font-semibold"> halal</span> and
             <span className="text-blue-600 font-semibold"> trusted</span> matrimonial services
           </motion.p>
 
@@ -130,7 +149,7 @@ export default function HeroSection() {
           className="bg-white/90 dark:bg-gray-900/90 backdrop-blur-mdrounded-2xl md:p-8 p-4 shadow-2xl max-w-4xl mx-auto mb-8"
         >
           <h3 className="md:text-2xl text-lg font-semibold md:mb-6 mb-4  text-gray-800 dark:text-white">Start Your Journey Today</h3>
-          
+
           <div className="   grid grid-cols-2 md:grid-cols-4 md:gap-4 gap-2 mb-6">
             <Select>
               <SelectTrigger className="md:h-12 bg-gray-100 dark:bg-gray-800 text-gray-800 dark:text-gray-200">
@@ -141,7 +160,7 @@ export default function HeroSection() {
                 <SelectItem value="groom">Groom</SelectItem>
               </SelectContent>
             </Select>
-            
+
             <Select>
               <SelectTrigger className="md:h-12">
                 <SelectValue placeholder="Age" />
@@ -154,7 +173,7 @@ export default function HeroSection() {
                 <SelectItem value="40+">40+ years</SelectItem>
               </SelectContent>
             </Select>
-            
+
             <Select>
               <SelectTrigger className="md:h-12">
                 <SelectValue placeholder="Sect" />
@@ -165,7 +184,7 @@ export default function HeroSection() {
                 <SelectItem value="other">Other</SelectItem>
               </SelectContent>
             </Select>
-            
+
             <Select>
               <SelectTrigger className="md:h-12">
                 <SelectValue placeholder="City" />
@@ -184,7 +203,7 @@ export default function HeroSection() {
               </SelectContent>
             </Select>
           </div>
-          
+
           <motion.div
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
