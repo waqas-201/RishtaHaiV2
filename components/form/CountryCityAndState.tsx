@@ -6,7 +6,7 @@ import { ArrowLeft, ArrowRight } from 'lucide-react';
 import { cn } from "@/lib/utils";
 import { motion, AnimatePresence } from "framer-motion";
 import { Label } from '../ui/label';
-import { errorAnimation, inputAnimation } from '@/app/constents/constents';
+import { errorAnimation, inputAnimation } from '@/constents/constents';
 import ErrorMessage from './errorMessage';
 import { FormData, StepComponentProps } from './types';
 import { Checkbox } from './LocationIcon';

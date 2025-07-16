@@ -6,7 +6,7 @@ import { useEffect } from "react";
 import { AnimatePresence } from "framer-motion";
 import { FormData, StepComponentProps } from "./types";
 import { RadioGroupWrapper } from "./animatedRadioWrappre";
-import { genderOptions, hasChildrenOptions, LiveWithYou, maritalStatusOptions, profileOptions } from "@/app/constents/constents";
+import { genderOptions, hasChildrenOptions, LiveWithYou, maritalStatusOptions, profileOptions } from "@/constents/constents";
 import UserIcon from "./userIcon";
 
 

@@ -90,7 +90,7 @@ export default function SuccessStories() {
               <div className="relative">
                 <Quote className="absolute -top-2 -left-2 text-pink-200 dark:text-pink-800" size={24} />
                 <p className="text-gray-700 dark:text-gray-300 leading-relaxed pl-4 italic">
-                  "{story.story}"
+                  &quot;{story.story}&quot;
                 </p>
               </div>
 

@@ -112,7 +112,7 @@ export default function HowItWorks() {
           viewport={{ once: true }}
           className="mt-20 text-center"
         >
-          <div className="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-lg max-w-4xl mx-auto">
+          <div id='Guided' className="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-lg max-w-4xl mx-auto">
             <h3 className="text-2xl font-semibold mb-4 text-gray-800 dark:text-white">
               Guided by Islamic Principles & Pakistani Culture
             </h3>

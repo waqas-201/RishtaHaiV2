@@ -2,7 +2,7 @@ import { useFormContext } from "react-hook-form";
 import { Button } from "../ui/button";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import { FormData, StepComponentProps } from "./types";
-import { Communities, familyStatusOptions, topReligions2 } from "@/app/constents/constents";
+import { Communities, familyStatusOptions, topReligions2 } from "@/constents/constents";
 import SelectWrapper from "./animateAndSelect";
 import ReligionIcon from "./religionIcon";
 

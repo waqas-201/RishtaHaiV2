@@ -1,11 +1,15 @@
 'use client';
+
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Menu, X } from 'lucide-react';
-import { ThemeToggle } from './ThemeToggle'
-import { useLenis } from "lenis/react"
+import { ThemeToggle } from './ThemeToggle';
+import { useLenis } from 'lenis/react';
 import Image from 'next/image';
+import Link from 'next/link';
+import Logo from './Logo';
 
+const MotionLink = motion(Link);
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -13,9 +17,7 @@ export default function Header() {
   const lenis = useLenis();
 
   useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
-    };
+    const handleScroll = () => setIsScrolled(window.scrollY > 50);
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
@@ -24,7 +26,7 @@ export default function Header() {
     e.preventDefault();
     const el = document.querySelector(target) as HTMLElement;
     if (el) lenis?.scrollTo(el);
-    setIsMenuOpen(false); // close menu on mobile
+    setIsMenuOpen(false); // Close mobile menu
   };
 
   return (
@@ -38,68 +40,61 @@ export default function Header() {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
-          {/* Logo */}
-          <motion.div whileHover={{ scale: 1.05 }} className="flex items-center space-x-2">
-            <Image
-              src="https://r6lo7i3owc.ufs.sh/f/Q3K0qACgFHuv4ZYdz4VkADzSpUhJFoWbeRXxTtVmQncuv40g"
-              alt="RishtaHai Logo"
-              width={120}
-              height={40}
-              className="h-20 w-auto"
-            />
-          </motion.div>
-
-          {/* Desktop Navigation */}
+          <Logo />
+          {/* Desktop Nav */}
           <nav className="hidden md:flex items-center space-x-8">
-            <motion.a
+            <MotionLink
+              href="/"
               whileHover={{ scale: 1.05, y: -2 }}
-              href="#home"
-              onClick={(e) => handleSmoothScroll(e, '#home')}
-              className="text-gray-700 dark:text-gray-300 hover:text-pink-600 dark:hover:text-pink-400 font-medium transition-all duration-300 relative group"
+              className="text-gray-700 dark:text-gray-300 hover:text-pink-600 dark:hover:text-pink-400 font-medium transition-all relative group"
             >
               Home
-              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-pink-600 to-blue-600 group-hover:w-full transition-all duration-300"></span>
-            </motion.a>
-            <motion.a
-              whileHover={{ scale: 1.05, y: -2 }}
-              href="#HWC"
+              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-pink-600 to-blue-600 group-hover:w-full transition-all duration-300" />
+            </MotionLink>
+
+            <button
               onClick={(e) => handleSmoothScroll(e, '#HWC')}
-              className="text-gray-700 dark:text-gray-300 hover:text-pink-600 dark:hover:text-pink-400 font-medium transition-all duration-300 relative group"
+              className="text-gray-700 dark:text-gray-300 hover:text-pink-600 dark:hover:text-pink-400 font-medium transition-all relative group"
             >
-              How It Works
-              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-pink-600 to-blue-600 group-hover:w-full transition-all duration-300"></span>
-            </motion.a>
-            <motion.a
-              whileHover={{ scale: 1.05, y: -2 }}
-              href="#success"
+              <motion.span whileHover={{ scale: 1.05, y: -2 }}>
+                How It Works
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-pink-600 to-blue-600 group-hover:w-full transition-all duration-300" />
+              </motion.span>
+            </button>
+
+            <button
               onClick={(e) => handleSmoothScroll(e, '#success')}
-              className="text-gray-700 dark:text-gray-300 hover:text-pink-600 dark:hover:text-pink-400 font-medium transition-all duration-300 relative group"
+              className="text-gray-700 dark:text-gray-300 hover:text-pink-600 dark:hover:text-pink-400 font-medium transition-all relative group"
             >
-              Success Stories
-              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-pink-600 to-blue-600 group-hover:w-full transition-all duration-300"></span>
-            </motion.a>
-            <motion.a
-              whileHover={{ scale: 1.05, y: -2 }}
-              href="#features"
+              <motion.span whileHover={{ scale: 1.05, y: -2 }}>
+                Success Stories
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-pink-600 to-blue-600 group-hover:w-full transition-all duration-300" />
+              </motion.span>
+            </button>
+
+            <button
               onClick={(e) => handleSmoothScroll(e, '#features')}
-              className="text-gray-700 dark:text-gray-300 hover:text-pink-600 dark:hover:text-pink-400 font-medium transition-all duration-300 relative group"
+              className="text-gray-700 dark:text-gray-300 hover:text-pink-600 dark:hover:text-pink-400 font-medium transition-all relative group"
             >
-              Features
-              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-pink-600 to-blue-600 group-hover:w-full transition-all duration-300"></span>
-            </motion.a>
+              <motion.span whileHover={{ scale: 1.05, y: -2 }}>
+                Features
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-pink-600 to-blue-600 group-hover:w-full transition-all duration-300" />
+              </motion.span>
+            </button>
           </nav>
 
-          {/* Desktop CTA Buttons */}
+          {/* Desktop CTA */}
           <div className="hidden md:flex items-center space-x-4">
             <ThemeToggle />
           </div>
 
-          {/* Mobile Menu Button */}
+          {/* Mobile Menu Toggle */}
           <div className="md:hidden flex items-center space-x-2">
             <ThemeToggle />
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               className="text-gray-700 dark:text-gray-300"
+              aria-label="Toggle Menu"
             >
               {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
@@ -114,35 +109,32 @@ export default function Header() {
             exit={{ opacity: 0, y: -20 }}
             className="md:hidden bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-gray-700 py-4"
           >
-            <nav className="flex flex-col space-y-4">
-              <a
-                href="#home"
-                onClick={(e) => handleSmoothScroll(e, '#home')}
+            <nav className="flex flex-col space-y-4 px-4">
+              <Link
+                href="/"
+                onClick={() => setIsMenuOpen(false)}
                 className="text-gray-700 dark:text-gray-300 hover:text-pink-600 dark:hover:text-pink-400 font-medium"
               >
                 Home
-              </a>
-              <a
-                href="#HWC"
+              </Link>
+              <button
                 onClick={(e) => handleSmoothScroll(e, '#HWC')}
-                className="text-gray-700 dark:text-gray-300 hover:text-pink-600 dark:hover:text-pink-400 font-medium"
+                className="text-left text-gray-700 dark:text-gray-300 hover:text-pink-600 dark:hover:text-pink-400 font-medium"
               >
                 How It Works
-              </a>
-              <a
-                href="#success"
+              </button>
+              <button
                 onClick={(e) => handleSmoothScroll(e, '#success')}
-                className="text-gray-700 dark:text-gray-300 hover:text-pink-600 dark:hover:text-pink-400 font-medium"
+                className="text-left text-gray-700 dark:text-gray-300 hover:text-pink-600 dark:hover:text-pink-400 font-medium"
               >
                 Success Stories
-              </a>
-              <a
-                href="#features"
+              </button>
+              <button
                 onClick={(e) => handleSmoothScroll(e, '#features')}
-                className="text-gray-700 dark:text-gray-300 hover:text-pink-600 dark:hover:text-pink-400 font-medium"
+                className="text-left text-gray-700 dark:text-gray-300 hover:text-pink-600 dark:hover:text-pink-400 font-medium"
               >
                 Features
-              </a>
+              </button>
             </nav>
           </motion.div>
         )}

@@ -4,7 +4,7 @@ import { Controller, useFormContext } from "react-hook-form";
 import { motion, AnimatePresence } from "framer-motion";
 
 import { RadioGroup, RadioGroupItem } from "../ui/radio-group";
-import { errorAnimation } from "@/app/constents/constents";
+import { errorAnimation } from "@/constents/constents";
 import ErrorMessage from "./errorMessage";
 import { Label } from "../ui/label";
 

@@ -3,6 +3,8 @@
 import { motion } from 'framer-motion';
 import { Heart, Mail, Phone, MapPin, Facebook, Twitter, Instagram, Youtube } from 'lucide-react';
 import Image from 'next/image';
+import Link from 'next/link';
+import Logo from './Logo';
 
 export default function Footer() {
   return (
@@ -18,12 +20,7 @@ export default function Footer() {
             className="lg:col-span-1"
           >
             <div className="flex items-center mb-4">
-              <Image
-                src="https://r6lo7i3owc.ufs.sh/f/Q3K0qACgFHuv4ZYdz4VkADzSpUhJFoWbeRXxTtVmQncuv40g"
-                alt="RishtaHai Logo"
-                width={150}
-                height={50}
-              />
+              <Logo />
             </div>
             <p className="text-gray-300 mb-6 leading-relaxed">
               Pakistan&apos;s most trusted Islamic matrimonial platform, helping Muslims across 
@@ -68,14 +65,14 @@ export default function Footer() {
             transition={{ duration: 0.6, delay: 0.1 }}
             viewport={{ once: true }}
           >
-            <h3 className="text-xl font-semibold mb-6">Quick Links</h3>
+            <h3 className="text-xl font-semibold mb-6  tracking-widest">COMPANY</h3>
             <ul className="space-y-3">
               <li><a href="#" className="text-gray-300 hover:text-pink-400 transition-colors">Home</a></li>
-              <li><a href="#" className="text-gray-300 hover:text-pink-400 transition-colors">Search Profiles</a></li>
-              <li><a href="#" className="text-gray-300 hover:text-pink-400 transition-colors">Success Stories</a></li>
-              <li><a href="#" className="text-gray-300 hover:text-pink-400 transition-colors">Features</a></li>
+              {/* <li><a href="#" className="text-gray-300 hover:text-pink-400 transition-colors">Search Profiles</a></li> */}
+              <li><a href="#success" className="text-gray-300 hover:text-pink-400 transition-colors">Success Stories</a></li>
+              <li><a href="#features" className="text-gray-300 hover:text-pink-400 transition-colors">Features</a></li>
               <li><a href="#" className="text-gray-300 hover:text-pink-400 transition-colors">Contact</a></li>
-              <li><a href="#" className="text-gray-300 hover:text-pink-400 transition-colors">Help Center</a></li>
+
             </ul>
           </motion.div>
 
@@ -86,14 +83,12 @@ export default function Footer() {
             transition={{ duration: 0.6, delay: 0.2 }}
             viewport={{ once: true }}
           >
-            <h3 className="text-xl font-semibold mb-6">Services</h3>
+            <h3 className="text-xl font-semibold mb-6  tracking-widest ">PRIVACY & YOU</h3>
             <ul className="space-y-3">
-              <li><a href="#" className="text-gray-300 hover:text-pink-400 transition-colors">Premium Membership</a></li>
-              <li><a href="#" className="text-gray-300 hover:text-pink-400 transition-colors">Profile Verification</a></li>
-              <li><a href="#" className="text-gray-300 hover:text-pink-400 transition-colors">Matchmaking Services</a></li>
-              <li><a href="#" className="text-gray-300 hover:text-pink-400 transition-colors">Wedding Planning</a></li>
-              <li><a href="#" className="text-gray-300 hover:text-pink-400 transition-colors">Islamic Guidance</a></li>
-              <li><a href="#" className="text-gray-300 hover:text-pink-400 transition-colors">Privacy & Safety</a></li>
+
+              <li><Link href="#" className="text-gray-300 hover:text-pink-400 transition-colors">Wedding Planning</Link></li>
+              <li><Link href="#Guided" className="text-gray-300 hover:text-pink-400 transition-colors">Islamic Guidance</Link></li>
+              <li><Link href="privecy-policy" className="text-gray-300 hover:text-pink-400 transition-colors">Privacy & Safety</Link></li>
             </ul>
           </motion.div>
 
@@ -104,21 +99,21 @@ export default function Footer() {
             transition={{ duration: 0.6, delay: 0.3 }}
             viewport={{ once: true }}
           >
-            <h3 className="text-xl font-semibold mb-6">Contact Us</h3>
+            <h3 className="text-xl font-semibold mb-6 tracking-widest ">CONTACT</h3>
             <div className="space-y-4">
               <div className="flex items-center">
                 <Mail className="text-pink-400 mr-3" size={20} />
-                <span className="text-gray-300">support@rishtahai.pk</span>
+                <span className="text-gray-300">support@rishtahai.com</span>
               </div>
               <div className="flex items-center">
                 <Phone className="text-pink-400 mr-3" size={20} />
-                <span className="text-gray-300">+92 21 1234 5678</span>
+                <span className="text-gray-300">+92 </span>
               </div>
               <div className="flex items-start">
                 <MapPin className="text-pink-400 mr-3 mt-1" size={20} />
                 <span className="text-gray-300">
-                  Main Boulevard, Gulberg III<br />
-                  Lahore, Punjab, Pakistan
+                  North Nazimabad <br />
+                  Karachi, Pakistan
                 </span>
               </div>
             </div>

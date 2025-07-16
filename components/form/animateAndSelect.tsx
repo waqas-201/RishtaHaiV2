@@ -4,7 +4,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import ErrorMessage from './errorMessage';
 import { Label } from '@/components/ui/label';
 import { Control, Controller, FieldValues, Path } from 'react-hook-form';
-import { errorAnimation, selectAnimation } from '@/app/constents/constents';
+import { errorAnimation, selectAnimation } from '@/constents/constents';
 
 interface Option {
     value: string;

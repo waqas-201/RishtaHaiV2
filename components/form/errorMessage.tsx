@@ -1,4 +1,4 @@
-import { errorAnimation } from '@/app/constents/constents'
+import { errorAnimation } from '@/constents/constents'
 import { motion } from 'framer-motion'
 import React from 'react'
 

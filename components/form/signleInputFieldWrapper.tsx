@@ -2,7 +2,7 @@ import { useFormContext, FieldValues } from "react-hook-form";
 import { motion, AnimatePresence } from "framer-motion";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { errorAnimation } from "@/app/constents/constents";
+import { errorAnimation } from "@/constents/constents";
 import ErrorMessage from "./errorMessage";
 
 interface ValidatedInputFieldProps {

@@ -5,7 +5,7 @@ import { Button } from "../ui/button";
 import { Controller, useFormContext } from "react-hook-form";
 import { motion, AnimatePresence } from "framer-motion";
 import { FormData, StepComponentProps } from "./types";
-import { errorAnimation, inputAnimation } from "@/app/constents/constents";
+import { errorAnimation, inputAnimation } from "@/constents/constents";
 import ErrorMessage from "./errorMessage";
 import Input46 from "./phoneInputs";
 import EmailIcon from "./emailIcon";

@@ -4,7 +4,7 @@ import { ArrowRight, X } from "lucide-react";
 import dynamic from "next/dynamic";
 import { Watch } from 'react-loader-spinner'
 
-import { numbersAsStrings, topCountries, topReligions } from "@/app/constents/constents";
+import { numbersAsStrings, topCountries, topReligions } from "@/constents/constents";
 import { Dialog, DialogContent, DialogTrigger } from "../ui/dialog";
 import { Button } from "../ui/button";
 import SelectWrapper from "./SelectWrapper";
